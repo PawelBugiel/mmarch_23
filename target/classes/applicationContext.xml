@@ -12,6 +12,16 @@
 
 	<bean id="myFortuneService"
 		class="com.pawelbugiel.HappyFortuneService">
+		
+	</bean>
+	
+	<bean id="myRandomFortuneService"
+	class="com.pawelbugiel.RandomForyuneService">
+	</bean>
+	
+	<bean id="myGolfCoach" 
+	class="com.pawelbugiel.GolfCoach">
+	<property name="fortuneService" ref="myRandomFortuneService"/>
 	</bean>
 
 	<bean id="myCoach" class="com.pawelbugiel.HockeyCoach">
@@ -25,7 +35,7 @@
 		<!-- set up setter injection -->
 		<property name="fortuneService" ref="myFortuneService" />
 
-		<!-- inject literal values -->
+		<!-- inject literal values using a setter and a configuration file-->
 		<property name="emailAddress"
 			value="CricketEamilFromBean@gamil.com" />
 		<property name="team" value="Ctrcket Team From Bean" />

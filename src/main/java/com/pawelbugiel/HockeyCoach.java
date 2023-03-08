@@ -13,15 +13,13 @@ public class HockeyCoach implements Coach {
 		this.fortuneService = fortuneService;
 	}
 
-	// == private methods ==
-	
+	// == public methods ==
 	public String getDailyWorkout() {
 		return "A hockey workout # mvn";
 	}
 
-	
 	public String getDailyFortune() {
 		return "Hockey " + this.fortuneService.getFortune();
 	}
-
+	
 }
