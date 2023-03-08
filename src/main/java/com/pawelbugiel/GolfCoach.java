@@ -11,7 +11,7 @@ public class GolfCoach implements Coach{
 
 	@Override
 	public String getDailyFortune() {
-		return fortuneService.getFortune();
+		return "GolfCoach " + fortuneService.getFortune();
 	}
 	
 	public void setFortuneService(FortuneService fortuneService) {
