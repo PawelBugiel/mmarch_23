@@ -22,4 +22,13 @@ public class HockeyCoach implements Coach {
 		return "Hockey " + this.fortuneService.getFortune();
 	}
 	
+	// add an init method 
+	public void anInitMethodName() {
+		System.out.println("HockeyCoach init method called..");
+	}
+	
+	// add a destroy method
+	public void aDestroyMethodName() {
+		System.out.println("HockeyCoach destroy method called..");
+	}
 }
