@@ -3,14 +3,16 @@ package com.pawelbugiel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 //@Component("tennisCoachBeanID")		// pass bean id
-@Component // default bean id
+@Component 			// default bean id
 public class TennisCoach implements Coach {
 
 	// == fields ==
 	@Autowired
+	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
 	private static final Logger log = LoggerFactory.getLogger(TennisCoach.class);
 
