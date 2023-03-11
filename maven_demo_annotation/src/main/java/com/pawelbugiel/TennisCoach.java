@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach {
 
 	// == fields ==
+	@Autowired
 	private FortuneService fortuneService;
 	private static final Logger log = LoggerFactory.getLogger(TennisCoach.class);
 
@@ -25,9 +26,15 @@ public class TennisCoach implements Coach {
 //		this.fortuneService = fortuneService;
 //	}
 	
-	@Autowired
+//	@Autowired
 	public void setFortuneService(FortuneService fortuneService) {
 		log.info(" Log from Tennis Coach, setter method ");
+		this.fortuneService = fortuneService;
+	}
+	
+//	@Autowired
+	public void someMethodToDI(FortuneService fortuneService) {
+		log.info(" Log from Tennis Coach, someMethodToDI method ");
 		this.fortuneService = fortuneService;
 	}
 	
