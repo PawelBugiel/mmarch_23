@@ -20,6 +20,9 @@ public class AnnotationMain {
 		System.out.println(coach.getDailyWorkout());
 		System.out.println(coach.getDailyFortune());
 		
+		coach = context.getBean("swimCoach", Coach.class);
+		((SwimCoach) coach).printFieldsValues();
+		
 		// close the context
 		context.close();
 
