@@ -14,4 +14,9 @@ public class PoloCoach implements Coach {
 		return "PoloCoach workout";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		return "Polo fortune";
+	}
+
 }
