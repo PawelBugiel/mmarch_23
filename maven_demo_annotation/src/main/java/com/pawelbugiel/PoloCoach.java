@@ -17,7 +17,7 @@ public class PoloCoach implements Coach {
 	
 	// using qualifier within the constructor
 	@Autowired
-	public PoloCoach(@Qualifier("RESTFortuneService")FortuneService fortuneService) {
+	public PoloCoach(@Qualifier("fileFortuneService")FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
 
