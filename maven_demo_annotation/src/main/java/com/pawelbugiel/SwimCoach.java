@@ -1,9 +1,11 @@
 package com.pawelbugiel;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+//@Scope("singleton")      // redundant annotation because sinleton scope is default 
 public class SwimCoach implements Coach {
 	
 	// == fields == 

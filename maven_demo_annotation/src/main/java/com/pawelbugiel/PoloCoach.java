@@ -2,9 +2,11 @@ package com.pawelbugiel;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("prototype")
 public class PoloCoach implements Coach {
 	
 //	@Autowired
@@ -18,6 +20,7 @@ public class PoloCoach implements Coach {
 	// using qualifier within the constructor
 	@Autowired
 	public PoloCoach(@Qualifier("fileFortuneService")FortuneService fortuneService) {
+		System.out.println(">> PoloCoach constructor called..");
 		this.fortuneService = fortuneService;
 	}
 
