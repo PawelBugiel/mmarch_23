@@ -14,6 +14,8 @@ public class JavaConfigAnnotationBeanDefinedMain {
 		
 		// use the bean 
 		System.out.println(coach.getDailyFortune());
+		System.out.println(coach);
+		
 
 		// close the context 
 		context.close();
